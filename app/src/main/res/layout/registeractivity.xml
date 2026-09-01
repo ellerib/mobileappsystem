@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0080FE">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="352dp"
+        android:layout_height="553dp"
+        android:layout_margin="25dp"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="89dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="430dp"
+            android:layout_height="771dp"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="108dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="78dp"
+                android:layout_height="25dp"
+                android:text="Full name"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="39dp" />
+
+            <EditText
+                android:id="@+id/fullnametext"
+                android:layout_width="285dp"
+                android:layout_height="37dp"
+                android:text="John Doe"
+                android:background="#F2F2F2"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="74dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="74dp"
+                android:layout_height="20dp"
+                android:text="Email"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="128dp" />
+
+            <EditText
+                android:id="@+id/emailtext"
+                android:layout_width="287dp"
+                android:layout_height="36dp"
+                android:text="your@email.com"
+                android:background="#F2F2F2"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="157dp" />
+
+            <TextView
+                android:layout_width="288dp"
+                android:layout_height="21dp"
+                android:text="Password"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="214dp" />
+
+            <EditText
+                android:layout_width="290dp"
+                android:layout_height="34dp"
+                android:text="............"
+                android:background="#F2F2F2"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="246dp" />
+
+            <TextView
+                android:layout_width="288dp"
+                android:layout_height="21dp"
+                android:text="Confirm password"
+
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="294dp" />
+
+            <EditText
+                android:layout_width="290dp"
+                android:layout_height="34dp"
+                android:text="............."
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="326dp"
+                android:background="#F2F2F2"
+                />
+
+            <Button
+                android:layout_width="293dp"
+                android:layout_height="53dp"
+                android:text="Create Account"
+                android:backgroundTint="#0080FE"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="373dp" />
+
+            <TextView
+                android:layout_width="288dp"
+                android:layout_height="21dp"
+                android:text="Already have an account? Sign-In"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="31dp"
+                tools:layout_editor_absoluteY="440dp"
+                android:background="#F2F2F2"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
