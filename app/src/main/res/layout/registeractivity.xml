@@ -64,6 +64,7 @@
                 tools:layout_editor_absoluteY="214dp" />
 
             <EditText
+                android:id="@+id/passwordregister"
                 android:layout_width="290dp"
                 android:layout_height="34dp"
                 android:text="............"
@@ -80,6 +81,7 @@
                 tools:layout_editor_absoluteY="294dp" />
 
             <EditText
+                android:id="@+id/confirmpass"
                 android:layout_width="290dp"
                 android:layout_height="34dp"
                 android:text="............."
@@ -89,6 +91,7 @@
                 />
 
             <Button
+                android:id="@+id/createlink"
                 android:layout_width="293dp"
                 android:layout_height="53dp"
                 android:text="Create Account"
@@ -97,6 +100,7 @@
                 tools:layout_editor_absoluteY="373dp" />
 
             <TextView
+                android:id="@+id/signinlink"
                 android:layout_width="288dp"
                 android:layout_height="21dp"
                 android:text="Already have an account? Sign-In"
