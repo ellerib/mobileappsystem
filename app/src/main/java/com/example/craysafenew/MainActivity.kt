@@ -22,18 +22,21 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val registerlink = findViewById<TextView>(R.id.registerLink)
+        fun registerlink(){
+            val registerlink = findViewById<TextView>(R.id.registerLink)
 
-        registerlink.setOnClickListener {
+            registerlink.setOnClickListener {
 
-            val intent = Intent(this, register::class.java)
+                val intent = Intent(this, register::class.java)
+
+            }
+
+            val username = findViewById<EditText>(R.id.emailtext)
+            val password = findViewById<EditText>(R.id.passwordtext)
 
         }
 
-        val username = findViewById<EditText>(R.id.emailtext)
-        val password = findViewById<EditText>(R.id.passwordtext)
-
-
+        registerlink()
 
     }
 }
