@@ -8,14 +8,14 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:background="#0080FE"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="197dp"
         android:layout_height="58dp"
         android:gravity="center"
-        android:text="CraySafe"
+        android:text="@string/tittlestring"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginTop="10dp"
-                android:text="Sign-In"
+                android:text="@string/signinbuttontext"
                 android:backgroundTint="#0080FE" />
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Don't have an account? Register" />
+                android:text="@string/registertextlink" />
 
         </LinearLayout>
 

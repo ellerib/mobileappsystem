@@ -1,0 +1,23 @@
+strings.xml
+
+<resources>
+   <!-- Register strings-->
+
+    <string name="app_name">Craysafenew</string>
+    <string name="fullnamestring"> Fullname  </string>
+    <string name="textemail"> Email </string>
+
+    <string name="textpassword"> Password </string>
+    <string name="confirmpasstext"> Confirm password</string>
+    <string name="logintextdirect"> Already have an account? Sign-In </string>
+    <string name="createaccounttext"> Create Account </string>
+    <string name="purchaseidtext"> Purchase ID </string>
+ 
+    <string name="passwordcontent"> Password box </string>
+    <string name="productidlabel"> JD-576 </string>
+
+    <!-- Login strings -->
+    <string name="tittlestring"> CraySafe </string>
+    <string name="signinbuttontext"> Sign-In </string>
+    <string name="registertextlink"> Don\'t have an account? Register </string>
+</resources>
