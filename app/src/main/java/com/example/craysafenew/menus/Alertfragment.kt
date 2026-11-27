@@ -1,36 +1,86 @@
 package com.example.craysafenew.menus
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.craysafenew.R
-import androidx.lifecycle.ViewModel
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.craysafenew.ApiBuilder
+import com.example.craysafenew.alertpage.Alertadapter
+import com.example.craysafenew.alertnotif
 
 // ALERT FRAGMENT
-class Alertfragment : Fragment(R.layout.fragment_first_fragment) {
-    // TODO: Rename and change types of parameters
+class Alertfragment : Fragment(R.layout.fragment_alert) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: Alertadapter
+    private lateinit var unreadstatus: TextView
 
-        val warningtype = view?.findViewById<TextView>(R.id.warningtype)
-        val typemodule = view?.findViewById<TextView>(R.id.typeofmodule)
-        val description = view?.findViewById<TextView>(R.id.description)
-        val suggestion = view?.findViewById<TextView>(R.id.suggestion)
+    // CONNECT TO RESPONSE API
+    private val alerts = mutableListOf<alertnotif>()
 
+    override fun onViewCreated(view: View,savedInstanceState: Bundle?){
+
+        super.onViewCreated(view, savedInstanceState)
+
+        recyclerView = view.findViewById(R.id.alertbox)
+        unreadstatus = view.findViewById(R.id.unreadstatus)
+
+        adapter = Alertadapter(alerts)
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter
+
+        // GETTING XML REFERENCE FOR DATA TO DISPLAY
+        val alertdate = view.findViewById<TextView>(R.id.alertdate)
+        val severity = view.findViewById<TextView>(R.id.severity)
+        val parameter = view.findViewById<TextView>(R.id.parameter)
+        val description = view.findViewById<TextView>(R.id.description)
+        val suggestions = view.findViewById<TextView>(R.id.suggestion)
+        val advice = view.findViewById<TextView>(R.id.advice)
+        val message = view.findViewById<TextView>(R.id.message)
+        val status = view.findViewById<TextView>(R.id.status)
+        val tankname = view.findViewById<TextView>(R.id.tankname)
+
+        // CONVERTING TO STRING
+        val alertdatefield = alertdate.text.toString()
+        val severityfield = severity.text.toString()
+        val parameterfield = parameter.text.toString()
+        val descriptionfield = description.text.toString()
+        val suggestionsfield = suggestions.text.toString()
+        val advicefield = advice.text.toString()
+        val messagefield = message.text.toString()
+        val statusfield = status.text.toString()
+        val tanknamefield = tankname.text.toString()
+
+        val alertrequests = alertnotif(
+            alertdate = alertdatefield,
+            severity = severityfield,
+            parameter = parameterfield,
+            description = descriptionfield,
+            suggestion = suggestionsfield,
+            advice = advicefield,
+            message = messagefield,
+            status = statusfield,
+            tankname = tanknamefield
+        )
+        // FETCH API
+        ApiBuilder.apiinterface.getalerts(alertrequests)
 
 
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_fragment, container, false)
+    private fun displayalerts(newAlerts: List<alertnotif>){
+        alerts.clear()
+        alerts.add(newAlerts)
+
+        alerts
+
+
     }
+
+
 
 }

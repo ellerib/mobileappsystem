@@ -36,7 +36,7 @@
                 />
 
             <EditText
-                android:id="@+id/usernamelabel"
+                android:id="@+id/etusernamelabel"
                 android:layout_width="280dp"
                 android:layout_height="48dp"
                 android:hint="@string/fullnameinput"

@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Craysafenew">
         <activity
-            android:name=".LoginActivity"
+            android:name=".userauthen.LoginAuth"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

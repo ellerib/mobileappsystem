@@ -5,11 +5,9 @@ data class ResponseApi (
     val message: String
 )
 
-data class loginrequests(
-    val email: String,
-    val password: String
-)
+// LOGIN DATA HOLDER
 
+//REGISTER DATA HOLDER
 data class registerrequests(
     val username: String,
     val password: String,
@@ -17,21 +15,22 @@ data class registerrequests(
     val email: String
 )
 
-// ALERT RESPONSE
-data class alertrequests(
+// ALERT DATA HOLDER
+data class alertnotif(
     val alertdate: String,
     val severity: String,
     val parameter: String, // PH, TEMP, TURBIDITY
     val description: String,
-    val advice: String,
+    val suggestion:String,
+    val advice: String, // SAME AS SUGGESTION
     val message: String,
     val status: String,
-    val tank_name: String
+    val tankname: String
 )
 
 data class alertresponse(
     val success: Boolean,
-    val data: List<alertrequests>?=null,
+    val data: List<alertnotif>?=null,
     val unreadcount: Int? = null,
     val message: String? = null
 )

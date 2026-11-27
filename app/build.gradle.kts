@@ -9,6 +9,10 @@ android {
         version = release(37)
     }
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.craysafenew"
         minSdk = 26
@@ -56,5 +60,8 @@ dependencies {
 
     // FRAGMENT FOR BOTTOM NAVIGATION
     implementation("com.google.android.material:material:1.14.0")
+
+    //SPLASHSCREEN
+    implementation("androidx.core:core-splashscreen:1.2.0")
 
 }

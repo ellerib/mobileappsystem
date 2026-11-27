@@ -2,21 +2,26 @@ package com.example.craysafenew
 
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.Field
+import retrofit2.http.GET
 import retrofit2.http.POST
+import com.example.craysafenew.userauthen.loginresponses.logindata
 
 interface Apiinterface {
 
     @POST("api/login")
     fun login(
-        @Body request: loginrequests
-    ): Call<ResponseApi>
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): logindata
 
     @POST("api/register")
     fun register(
         @Body request: registerrequests
     ): Call<ResponseApi>
 
-    fun getallalerts(
-        request: alertrequests
+    @GET("api/alerts")
+    fun getalerts(
+        @Body request: alertnotif
     ): Call<ResponseApi>
 }
